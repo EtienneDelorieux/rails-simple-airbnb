@@ -1,0 +1,25 @@
+<h1>All our flats (<%= @flats.size %>)</h1>
+
+<div class="flat-list">
+  <% @flats.each do |flat| %>
+    <div class="flat">
+      <div class="flat__content">
+        <h2 class="flat__name"><%= flat.name %></h2>
+        <p class="flat__address"><%= flat.address %></p>
+        <p class="flat__info">
+          <span class="flat__info-guests">
+            <%= icon('fas', 'users') %>
+            <%= flat.number_of_guests %>
+          </span>
+          <span class="flat__info-price">
+            <%= icon('fas', 'euro-sign') %>
+            <%= flat.price_per_night %>
+          </span>
+        </p>
+      </div>
+      <div class="flat__footer">
+        <%= link_to "More info", flat_path(flat) %>
+      </div>
+    </div>
+  <% end %>
+</div>
