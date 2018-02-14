@@ -7,18 +7,26 @@
         <h2 class="flat__name"><%= flat.name %></h2>
         <p class="flat__address"><%= flat.address %></p>
         <p class="flat__info">
-          <span class="flat__info-guests">
+          <span class="flat__info--guests">
             <%= icon('fas', 'users') %>
             <%= flat.number_of_guests %>
           </span>
-          <span class="flat__info-price">
+          <span class="flat__info--price">
             <%= icon('fas', 'euro-sign') %>
             <%= flat.price_per_night %>
           </span>
         </p>
       </div>
       <div class="flat__footer">
-        <%= link_to "More info", flat_path(flat) %>
+        <span class="flat__footer--plus">
+          <%= icon('fas', 'plus') %><%= link_to "More info", flat_path(flat) %>
+        </span>
+        <span class="flat__footer--edit">
+          <%= icon('fas', 'edit') %><%= link_to "Edit", edit_flat_path(flat) %>
+        </span>
+        <span class="flat__footer--delete">
+          <%= icon('fas', 'trash') %><%= link_to "Delete", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
+        </span>
       </div>
     </div>
   <% end %>

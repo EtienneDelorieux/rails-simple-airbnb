@@ -39,9 +39,30 @@
   background-color: #FAFAFA;
   border-top: 1px solid #EEE;
   align-self: flex-end;
+  border-radius: 0 0 3px 3px;
 }
 
 .flat__info-guests {
   display: inline-block;
   margin-right: 20px;
+}
+
+.flat__footer--plus,
+.flat__footer--edit {
+  margin-right: 10px;
+}
+
+.flat__footer--plus,
+.flat__footer--plus a {
+  color: $blue;
+}
+
+.flat__footer--edit,
+.flat__footer--edit a {
+  color: $orange;
+}
+
+.flat__footer--delete,
+.flat__footer--delete a {
+  color: $red;
 }

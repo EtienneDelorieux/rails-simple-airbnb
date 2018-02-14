@@ -21,6 +21,8 @@ class FlatsController < ApplicationController
   end
 
   def update
+    @flat.update(flat_params)
+    redirect_to flats_path
   end
 
   def destroy
